@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Added color to "background" of the movement area */
+body {
+  background-color: #141313;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the area the object can move on */
+#movementMap {
+  width: 70rem; /* temporarily sized, will be adjusted to my preferance as I go*/
+  height: 50rem;
+  /* Tempt backgroundColor */
+  background-color: aquamarine;
+}
+
+#myObject {
+  width: 3rem;
+  height: 3rem;
+}
