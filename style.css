@@ -16,13 +16,19 @@ body {
 
 /* Styling for the area the object can move on */
 #movementMap {
-  width: 70rem; /* temporarily sized, will be adjusted to my preferance as I go*/
-  height: 50rem;
-  /* Tempt backgroundColor */
-  background-color: aquamarine;
+  width: 900px; /* temporarily sized, will be adjusted to my preferance as I go. */
+  height: 600px;
+  background-image: url(./img/playgroundBg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
 }
 
 #myObject {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
+  background-image: url(./img/objectBlueBird.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
