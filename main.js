@@ -11,7 +11,10 @@ let AxisX = 0;
 let AxisY = 0;
 //NS: ---> X = left to right from the top of the screen
 
-let tempo = 10;
+//To flip
+let flipped = false;
+
+let tempo = 1;
 document.addEventListener("keydown", (e) => {
   if (AxisY < 0) {
     AxisY = 0;
@@ -22,18 +25,24 @@ document.addEventListener("keydown", (e) => {
   } else if (AxisX > 900) {
     AxisX = 900;
   } else {
-    if (e.key == "ArrowUp") {
+    event.preventDefault
+    if (e.key == "ArrowUp" || 38) {
       AxisY -= tempo;
-    } else if (e.key == "ArrowRight") {
+    } else if (e.key === "ArrowRight" || 39) {
       AxisX -= tempo;
-    } else if (e.key == "ArrownDown") {
+    } else if (e.key === "ArrownDown" || 40) {
       AxisY += tempo;
-    } else if (e.key == "ArrowLeft") {
+    } else if (e.key == "ArrowLeft" || 37) {
       AxisX += tempo;
     }
   }
   boxObject.style.left = `${AxisX}`;
   boxObject.style.top = `${AxisY}`;
+});
+
+// Adding 
+containerMap.addEventListener("click", () => {
+  AxisX = e.offsetX 0
 });
 
 //The code below is fetched from google: only copied to study, test and adjust to my use of it later
