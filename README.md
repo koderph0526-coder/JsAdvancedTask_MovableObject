@@ -21,7 +21,8 @@ Main part of the task is how it functions, free to style however we want. I then
 ## My thoughts/Ideas:
 
 - Start by making base template and connect everything needed. [x]
-- Quickly find suitable imgages and/or icon for the assignment []
-- Add needed styling for background and object. []
-- JS! Crossref my own notes from class and teachers gitRepo
+- Quickly find suitable imgages and/or icon for the assignment [x]
+- Add needed styling for background and object. [x]
+- JS! Crossref my own notes from class and teachers gitRepo [x]
+- clean up/tidy Css and Js if needed []
 - Test as you go, console.log every step to avoid getting stuck without knowing what broke!
