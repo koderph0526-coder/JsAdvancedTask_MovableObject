@@ -2,7 +2,7 @@
 const containerMap = document.querySelector("#movementMap");
 const boxObject = document.querySelector("#myObject");
 
-//Atempting to give the object a different starting point
+//Atempting to give the object a different starting point - Can be ignore for now
 // boxObject.style.left = "160px";
 // boxObject.style.top = "270px";
 
@@ -11,11 +11,12 @@ let AxisX = 0;
 let AxisY = 0;
 //NS: ---> X = left to right from the top of the screen
 
-//To flip
-// let flipped = false;
+// Adding and adjusting movement speed of the object
+let tempo = 15;
 
-let tempo = 20;
+//Function to listen for keypress and to adjust possible movement for the object
 document.addEventListener("keydown", (e) => {
+  //Adjusting MovementSpace
   if (AxisY < 0) {
     AxisY = 0;
   } else if (AxisX < 0) {
@@ -45,25 +46,9 @@ document.addEventListener("keydown", (e) => {
 
 // Adding mouse control. Need to add a better limit, as it now moves outside the box on mouse controll.
 containerMap.addEventListener("click", (e) => {
-  AxisX = e.offsetX - 30;
-  AxisY = e.offsetY - 30;
+  //Offset to control how close to the mouse pointed click it displays when it moved to the clicked point
+  AxisX = e.offsetX - 35;
+  AxisY = e.offsetY - 35;
   boxObject.style.left = `${AxisX}px`;
   boxObject.style.top = `${AxisY}px`;
 });
-
-//The code below is fetched from google: only copied to study, test and adjust to my use of it later
-//
-//const img = document.getElementById('myImage');
-// let isFlipped = false;
-
-// window.addEventListener("keydown", (event) => {
-//   // Check if the 'f' key is pressed (or use 'ArrowLeft', etc.)
-//   if (event.key === "f") {
-//     isFlipped = !isFlipped;
-//     // Toggle horizontal mirror flip
-//     img.style.transform = isFlipped ? "scaleX(-1)" : "scaleX(1)";
-//   }
-// });
-//The HTML that was noted to it:
-//<img id="myImage" src="example.jpg" alt="Sample" style="width: 300px; transition: transform 0.2s;"></img>
-//NS: I'll be using (event.key === "ArrowLeft" || "ArrowRight") !

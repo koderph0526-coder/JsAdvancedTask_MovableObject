@@ -24,5 +24,6 @@ Main part of the task is how it functions, free to style however we want. I then
 - Quickly find suitable imgages and/or icon for the assignment [x]
 - Add needed styling for background and object. [x]
 - JS! Crossref my own notes from class and teachers gitRepo [x]
-- clean up/tidy Css and Js if needed []
+- Clean up/tidy Css and Js if needed []
+- Add Obstacle that the object/Bird has to navigate? []
 - Test as you go, console.log every step to avoid getting stuck without knowing what broke!
