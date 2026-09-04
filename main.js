@@ -12,37 +12,43 @@ let AxisY = 0;
 //NS: ---> X = left to right from the top of the screen
 
 //To flip
-let flipped = false;
+// let flipped = false;
 
-let tempo = 1;
+let tempo = 20;
 document.addEventListener("keydown", (e) => {
   if (AxisY < 0) {
     AxisY = 0;
   } else if (AxisX < 0) {
     AxisX = 0;
-  } else if (AxisY > 600) {
-    AxisY = 600;
-  } else if (AxisX > 900) {
-    AxisX = 900;
+  } else if (AxisY > 520) {
+    AxisY = 520;
+  } else if (AxisX > 820) {
+    AxisX = 820;
   } else {
-    event.preventDefault
-    if (e.key == "ArrowUp" || 38) {
+    if (e.key === "ArrowUp") {
       AxisY -= tempo;
-    } else if (e.key === "ArrowRight" || 39) {
+    } else if (e.key === "ArrowLeft") {
       AxisX -= tempo;
-    } else if (e.key === "ArrownDown" || 40) {
+      // Adding a flip with direction change to match movement, using animation
+      boxObject.style.transform = "scaleX(-1)";
+    } else if (e.key === "ArrowDown") {
       AxisY += tempo;
-    } else if (e.key == "ArrowLeft" || 37) {
+    } else if (e.key === "ArrowRight") {
       AxisX += tempo;
+      //Adding another flip to have it change to corresponding direction with animation
+      boxObject.style.transform = "scaleX(1)";
     }
   }
-  boxObject.style.left = `${AxisX}`;
-  boxObject.style.top = `${AxisY}`;
+  boxObject.style.left = `${AxisX}px`;
+  boxObject.style.top = `${AxisY}px`;
 });
 
-// Adding 
-containerMap.addEventListener("click", () => {
-  AxisX = e.offsetX 0
+// Adding mouse control. Need to add a better limit, as it now moves outside the box on mouse controll.
+containerMap.addEventListener("click", (e) => {
+  AxisX = e.offsetX - 30;
+  AxisY = e.offsetY - 30;
+  boxObject.style.left = `${AxisX}px`;
+  boxObject.style.top = `${AxisY}px`;
 });
 
 //The code below is fetched from google: only copied to study, test and adjust to my use of it later
